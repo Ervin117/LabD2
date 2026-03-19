@@ -54,12 +54,12 @@ volatile uint32_t flanco2 = 0;
 volatile uint8_t numFlanco = 0;
 
 volatile uint32_t delta = 0;
-volatile uint32_t frecuencia = 0;
+float frecuencia = 0;
 uint32_t clk = 1000000;
 
 uint8_t buffer[10];
 uint8_t dt = 80;
-char datA[20];
+uint8_t datA[20];
 
 /* USER CODE END PV */
 
@@ -126,10 +126,10 @@ int main(void)
 	  	  while(flagMedicion == 0);
 	  	  flagMedicion = 0;
 	  	  delta = flanco2 - flanco1;
-	  	  frecuencia = clk / delta;
+	  	  frecuencia = clk /(float) delta;
 
-	  	  sprintf((char*)datA, "%lu\r\n",frecuencia);
-	  	  HAL_UART_Transmit(&huart2, datA,strlen((char*)datA),1000);
+	  	  sprintf(datA, "%f\n",frecuencia);
+	  	  HAL_UART_Transmit(&huart2, datA,strlen(datA),1000);
 	  	  HAL_TIM_IC_Start_IT(&htim2, TIM_CHANNEL_1);
 
     /* USER CODE END WHILE */
