@@ -1,0 +1,17 @@
+../Core/Src/main.c:124:6:generarSin	2
+../Core/Src/main.c:131:5:calcularARR	2
+../Core/Src/main.c:139:5:presForFrequency	2
+../Core/Src/main.c:148:6:playTone	3
+../Core/Src/main.c:166:6:playTone2	3
+../Core/Src/main.c:187:6:playTonePRE	3
+../Core/Src/main.c:206:6:noTone	1
+../Core/Src/main.c:210:6:noTone2	1
+../Core/Src/main.c:221:5:main	4
+../Core/Src/main.c:317:6:SystemClock_Config	3
+../Core/Src/main.c:365:13:MX_DAC_Init	3
+../Core/Src/main.c:405:13:MX_TIM1_Init	7
+../Core/Src/main.c:480:13:MX_TIM6_Init	3
+../Core/Src/main.c:518:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:549:13:MX_DMA_Init	1
+../Core/Src/main.c:567:13:MX_GPIO_Init	1
+../Core/Src/main.c:599:6:Error_Handler	1
